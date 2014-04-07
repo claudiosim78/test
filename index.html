@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="moviecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Sky Movies</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="bower_components/jquery/jquery-1.11.0.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/directives.js"></script>
+
+  <style>
+  body{
+    /*
+    *
+    * Used liveSearchDesing.jpg as body background: the focus of this test is to create an user-friendly quicksearch.
+    * Anyway in a normal scenario I usually start from a psd file
+    *
+    */
+    background: url(liveSearchDesing.jpg) no-repeat center -65px;
+    margin: 0;
+    padding: 0;
+  }
+
+  </style>
+</head>
+<body ng-controller="ClickCtrl" bn-document-click="handleClick( $event )">
+
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<header>  
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div>
+        <!--Sidebar content-->
+        <input ng-model="query" checkli>
+      </div>
+      <div id="quicksearch" ng-show="query.length>=3&&filteredMovies.length>0">
+        <!--Body content-->
+        <div class="all-movies"></div>
+        <ul class="movies">
+          <li tabindex="{{$index}}" ng-repeat="movie in (filteredMovies = (movies | filter:query | limitTo:5))"
+              class="thumbnail movie-listing" key-navigation>
+            <a href="#/movies/{{movie.slug}}" class="thumb"><img ng-src="{{movie.thumbnail}}"></a>
+            <a href="#/movies/{{movie.slug}}">{{movie.title}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
